@@ -26,6 +26,7 @@ function showNotification(msg, type) {
   notification.textContent = msg;
 }
 
+// eslint-disable-next-line no-unused-vars
 function clearNotification() {
   const notification = document.querySelector('[data-qa=notification]');
 
@@ -134,7 +135,6 @@ function thirdPromise() {
   });
 }
 
-clearNotification();
 // Запускаємо проміси та показуємо повідомлення з типом success/error
 
 firstPromise()
@@ -152,5 +152,3 @@ secondPromise().then((msg) => {
 thirdPromise().then((msg) => {
   showNotification(msg, 'success');
 });
-
-// clearNotification() не викликаємо відразу — воно викликається в потріб місцях
